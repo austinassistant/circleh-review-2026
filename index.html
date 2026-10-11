@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Circle H Wagyu Site Review | Pilot Automations</title>
+<style>
+:root{--ink:#1b1714;--char:#24201c;--cream:#f6f1e9;--paper:#fffdf9;--gold:#b08d57;--red:#d7261e;--muted:#6f655b;--line:#e6ddd0;--ok:#2f6b3b;--warn:#a5641c;--bad:#a8261f}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:.01em}
+a{color:var(--red)}
+img{max-width:100%;display:block}
+.wrap{max-width:860px;margin:0 auto;padding:0 18px}
+header.top{background:var(--char);color:var(--cream);padding:34px 0 30px;border-bottom:3px solid var(--gold)}
+header.top .eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.18em;font-size:12px;margin:0 0 8px}
+header.top h1{margin:0 0 8px;font-size:30px;line-height:1.2}
+header.top p{margin:0;color:#d9cfc2;font-size:14px}
+nav.toc{position:sticky;top:0;z-index:5;background:rgba(36,32,28,.96);backdrop-filter:blur(6px)}
+nav.toc .wrap{display:flex;gap:6px;overflow-x:auto;padding:10px 18px;scrollbar-width:none}
+nav.toc a{flex:0 0 auto;color:var(--cream);text-decoration:none;font-size:13px;padding:6px 12px;border:1px solid #4a423a;border-radius:999px}
+section{padding:34px 0 8px}
+section>h2{font-size:24px;margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 18px;font-size:14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;margin:0 0 14px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.summary p{margin:0 0 10px}
+.scores{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0 4px}
+.score{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center}
+.score b{display:block;font-size:26px;font-family:Georgia,serif}
+.score span{font-size:12px;color:var(--muted)}
+.score.warn b{color:var(--warn)} .score.bad b{color:var(--bad)} .score.ok b{color:var(--ok)}
+.note{font-size:12.5px;color:var(--muted)}
+.f{border-left:4px solid var(--line)}
+.f.now{border-left-color:var(--bad)} .f.quick{border-left-color:var(--warn)} .f.big{border-left-color:var(--gold)}
+.f h3{margin:0 0 6px;font-size:18px;line-height:1.3}
+.f p{margin:6px 0;font-size:15px}
+.f .lbl{font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tag{font-size:12px;padding:3px 9px;border-radius:999px;background:#efe7da;color:#5a4e41}
+.tag.e-low{background:#e3efe5;color:var(--ok)} .tag.e-med{background:#f6ead9;color:var(--warn)} .tag.e-high{background:#f5e0de;color:var(--bad)}
+.group-h{display:flex;align-items:center;gap:10px;margin:22px 0 10px}
+.group-h h3{margin:0;font-size:20px}
+.dot{width:12px;height:12px;border-radius:50%}
+ul.tight{margin:6px 0;padding-left:20px} ul.tight li{margin:3px 0;font-size:15px}
+/* compare blocks */
+.compare{display:grid;grid-template-columns:1fr;gap:14px;margin:10px 0 26px}
+.pane{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.pane .ph{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line);font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.pane .ph .pill{background:var(--char);color:var(--cream);padding:2px 8px;border-radius:999px;letter-spacing:.05em}
+.pane .ph .pill.ex{background:var(--gold)}
+.shot{max-height:520px;overflow:hidden;background:#eee}
+.shot img{width:100%;height:auto}
+.pane .cap{padding:10px 14px;font-size:13.5px;color:var(--muted)}
+.mock-note{font-size:11.5px;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;padding:8px 14px 0}
+/* mock hero */
+.mhero{position:relative;color:#fff;min-height:430px;display:flex;align-items:flex-end;background:#2a2620 url(img/hero.jpg) center/cover}
+.mhero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.7) 75%)}
+.mhero .in{position:relative;padding:22px}
+.mhero .loc{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#e8d3ad}
+.mhero h4{font-family:Georgia,serif;font-size:28px;line-height:1.15;margin:6px 0 8px;font-weight:600}
+.mhero p{margin:0 0 14px;font-size:14.5px;color:#eee}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 16px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none;border:0;cursor:default}
+.btn.red{background:var(--red);color:#fff} .btn.ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.6)}
+.btn.dark{background:var(--char);color:#fff} .btn.shop{background:#5a31f4;color:#fff}
+.btn.full{display:block;text-align:center;width:100%}
+/* mock product */
+.mprod{padding:14px}
+.mprod .imgbox{position:relative;border-radius:10px;overflow:hidden}
+.mprod .badge{position:absolute;top:10px;left:10px;background:var(--ok);color:#fff;font-size:12px;padding:3px 9px;border-radius:999px}
+.mprod .brand{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+.mprod h4{font-family:Georgia,serif;font-size:22px;margin:2px 0 6px}
+.price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price .now{font-size:22px;font-weight:700}
+.price .was{text-decoration:line-through;color:var(--muted)}
+.price .ppl{font-size:13px;background:#f3ece0;padding:2px 8px;border-radius:6px}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+.spec{background:#faf6ef;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:13px}
+.spec b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600}
+.ship-mini{font-size:13px;color:var(--ok);margin:10px 0 0}
+/* sold out mock */
+.mso{padding:14px}
+.mso .imgbox img{filter:grayscale(.3)}
+.mso input,.msign input{width:100%;padding:12px;border:1px solid #cfc4b5;border-radius:8px;font-size:15px;margin:8px 0;background:#fff}
+/* trust strip */
+.trust{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.trust div{background:var(--char);color:var(--cream);padding:14px;font-size:13px}
+.trust b{display:block;color:var(--gold);font-family:Georgia,serif;font-size:15px;margin-bottom:2px}
+.story{display:grid;grid-template-columns:1fr;background:var(--paper)}
+.story .simg{height:180px;background:url(img/cattle.jpg) center/cover}
+.story .stx{padding:16px}
+.story h5{font-family:Georgia,serif;font-size:19px;margin:0 0 6px}
+.story p{margin:0;font-size:14px}
+/* shipping block */
+.mship{padding:14px}
+.mship h5{font-family:Georgia,serif;font-size:19px;margin:0 0 10px}
+.srow{display:flex;gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:14px}
+.srow:first-of-type{border-top:0}
+.srow .ic{flex:0 0 34px;height:34px;border-radius:50%;background:#f1e8da;display:flex;align-items:center;justify-content:center;font-size:16px}
+.srow b{display:block}
+.fill{background:#fff4d6;padding:0 4px;border-radius:3px}
+.mhero .fill,.msign .fill{background:rgba(176,141,87,.6);color:#fff}
+/* signup */
+.msign{background:var(--char) url(img/cattle.jpg) center/cover;position:relative;color:#fff}
+.msign:before{content:"";position:absolute;inset:0;background:rgba(27,23,20,.82)}
+.msign .in{position:relative;padding:22px}
+.msign h5{font-family:Georgia,serif;font-size:22px;margin:0 0 6px}
+.msign p{font-size:14px;margin:0 0 6px;color:#e4dccf}
+.msign .fine{font-size:11px;color:#bdb3a5;margin-top:6px}
+.help li{margin:8px 0}
+footer{padding:30px 0 50px;color:var(--muted);font-size:13px}
+@media(min-width:720px){
+ header.top h1{font-size:38px}
+ .compare{grid-template-columns:1fr 1fr}
+ .scores{grid-template-columns:repeat(4,1fr)}
+ .trust{grid-template-columns:repeat(4,1fr)}
+ .story{grid-template-columns:1fr 1fr}.story .simg{height:auto;min-height:200px}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <p class="eyebrow">Pilot Automations &middot; Site review</p>
+ <h1>Circle H Wagyu<br>circlehwagyu.com</h1>
+ <p>Reviewed October 10, 2026. Public pages only, viewed as a shopper would on a phone.</p>
+</div></header>
+
+<nav class="toc"><div class="wrap">
+ <a href="#summary">Summary</a><a href="#now">Fix now</a><a href="#quick">Quick wins</a><a href="#big">Bigger bets</a><a href="#mockups">Mockups</a><a href="#help">How I can help</a>
+</div></nav>
+
+<main class="wrap">
+
+<section id="summary">
+ <h2>The short version</h2>
+ <div class="card summary">
+  <p>The store has a strong base: a real ranch story, good product photos, local pickup at the ranch in Elon, and fast payment options like Shop Pay, Apple Pay, Google Pay, PayPal and Venmo.</p>
+  <p>The biggest issue is stock. <b>Only 2 of 26 beef cuts can be bought right now</b> (Ribeye and Tenderloin), and 3 of the 4 "Best Sellers" on the homepage show "Sold out."</p>
+  <p>The second issue is trust. The top banner says "We Ship Nationwide," but the <b>shipping and refund policy pages do not exist</b> (they show "page not found"), and nothing on the site explains frozen shipping, packaging, minimums or delivery areas.</p>
+  <p>Most fixes are small and can be done in the Shopify admin in a few hours. The bigger gains come from price per pound, bundles, back-in-stock alerts and email flows.</p>
+ </div>
+ <div class="scores">
+  <div class="score bad"><b>2 of 26</b><span>beef cuts in stock</span></div>
+  <div class="score bad"><b>404</b><span>shipping and refund policy</span></div>
+  <div class="score warn"><b>72</b><span>homepage mobile speed*</span></div>
+  <div class="score bad"><b>52</b><span>product page mobile speed*</span></div>
+ </div>
+ <p class="note">*Lighthouse mobile performance score out of 100, one local run per page (Google's PageSpeed API was over its daily limit when checked). Scores vary run to run.</p>
+</section>
+
+<section id="now">
+ <div class="group-h"><span class="dot" style="background:var(--bad)"></span><h3>Fix now</h3></div>
+
+ <div class="card f now"><h3>1. Most beef is sold out, and the homepage leads with sold-out items</h3>
+  <p><span class="lbl">What I saw:</span> Only American Wagyu Ribeye Steak ($45) and Tenderloin Steak ($48) can be bought. Breakfast Sausage Links, New York Strip and Chuck Roast all show "Sold out" in the homepage Best Sellers. Sold-out pages offer no way to get notified.</p>
+  <p><span class="lbl">Why it matters:</span> New visitors hit dead ends and leave, and each sold-out page is a missed chance to collect an email.</p>
+  <p><span class="lbl">Fix:</span> Show in-stock items first, add "Notify me when back" (Klaviyo is already installed), and say when the next batch is coming.</p>
+  <div class="tags"><span class="tag e-low">Effort: Low</span><span class="tag">1 to 3 hours</span></div></div>
+
+ <div class="card f now"><h3>2. No shipping policy and no refund policy</h3>
+  <p><span class="lbl">What I saw:</span> Both policy pages return "page not found." The Terms of Service still says "our Refund Policy [LINK]" (an unfilled template spot). No page explains frozen shipping, dry ice, ship days, transit time, minimums, cost or delivery area.</p>
+  <p><span class="lbl">Why it matters:</span> Frozen meat is a trust purchase. Google Shopping and Meta Shops also expect these policies before approving listings.</p>
+  <p><span class="lbl">Fix:</span> Add both policies in Shopify settings, fix the [LINK], and add a short "How shipping works" block on product pages (see mockup below).</p>
+  <div class="tags"><span class="tag e-low">Effort: Low</span><span class="tag">Ranch supplies the real rules</span></div></div>
+
+ <div class="card f now"><h3>3. Stray code inside skincare descriptions</h3>
+  <p><span class="lbl">What I saw:</span> Four skincare products (Face Balm, Gold Edition Face Balm, Honey Moisturizer, Cool Mint Lip Balm) and the Skincare collection each have about 12 KB of pasted page code at the top of the description, including rules that can change the whole page layout. On the Face Balm page one sentence is split mid-word.</p>
+  <p><span class="lbl">Why it matters:</span> It can affect how pages look, adds weight, and Google Shopping or Meta catalogs may pick up code instead of a description.</p>
+  <p><span class="lbl">Fix:</span> Delete the code block in the HTML view and re-paste the text as plain text.</p>
+  <div class="tags"><span class="tag e-low">Effort: Low</span><span class="tag">Under 1 hour</span></div></div>
+
+ <div class="card f now"><h3>4. Price and option mistakes</h3>
+  <ul class="tight">
+   <li>Porterhouse: the larger 20 to 24 oz option ($45) costs less than 14 to 18 oz ($59).</li>
+   <li>5oz Patties: has a "7 oz" option at the same $9.75, but the title says 5 oz.</li>
+   <li>Hangar Steak: the "compare at" price ($24) is lower than the price ($29).</li>
+   <li>Stir Fry and Kabobs: the same $22 price shows twice.</li>
+   <li>Ribeye: description says both "Bone In" and "Boneless approximately 12oz"; the size option says 12oz to 16oz.</li>
+  </ul>
+  <div class="tags"><span class="tag e-low">Effort: Low</span><span class="tag">30 minutes</span></div></div>
+
+ <div class="card f now"><h3>5. Two different contact emails</h3>
+  <p>The Terms list info@circlehwagyu.com and the Privacy Policy lists a Gmail address. Product data also uses two brand names ("Circle H Ranch" and "Circle H Wagyu"). Pick one of each.</p>
+  <div class="tags"><span class="tag e-low">Effort: Low</span><span class="tag">30 minutes</span></div></div>
+</section>
+
+<section id="quick">
+ <div class="group-h"><span class="dot" style="background:var(--warn)"></span><h3>Quick wins</h3></div>
+
+ <div class="card f quick"><h3>6. Show price per pound and pack details</h3>
+  <p>The price-per-unit slot is empty on every product, and product weights in Shopify are inconsistent (some are 0, many are set to exactly 1 lb). Using the store's own numbers: Ribeye at $45 for 12 to 16 oz is about <b>$45 to $60 per lb</b>; Tenderloin at $48 for 8 to 12 oz is about <b>$64 to $96 per lb</b>. Buyers compare these numbers across ranches.</p>
+  <div class="tags"><span class="tag e-med">Effort: Low to Medium</span><span class="tag">2 to 4 hours</span></div></div>
+
+ <div class="card f quick"><h3>7. Search basics: headings and titles</h3>
+  <p>The homepage has an empty main heading (H1) and its page title is only "Circle H Wagyu." The Our Ranch page has no main heading. Collection headings read "Collection: American Wagyu Beef." Adding "Alamance County, NC" and "American Wagyu" to these helps local searches.</p>
+  <div class="tags"><span class="tag e-low">Effort: Low</span><span class="tag">1 hour</span></div></div>
+
+ <div class="card f quick"><h3>8. Add image descriptions (alt text)</h3>
+  <p>None of the product photos have alt text, and 6 of 11 homepage images are blank. This helps Google Images and shoppers using screen readers.</p>
+  <div class="tags"><span class="tag e-low">Effort: Low</span><span class="tag">1 to 2 hours</span></div></div>
+
+ <div class="card f quick"><h3>9. Refresh dated content</h3>
+  <ul class="tight">
+   <li>Our Ranch page: "Farm tours will be available spring of 2025!"</li>
+   <li>Gift Certificate: "stocking stuffers ... this year," with a 2023 screenshot as the photo.</li>
+   <li>The "News" blog has no posts.</li>
+   <li>The email signup promises "bundles," and a review mentions a holiday bundle, but none are for sale.</li>
+  </ul>
+  <div class="tags"><span class="tag e-low">Effort: Low</span><span class="tag">1 hour</span></div></div>
+
+ <div class="card f quick"><h3>10. Typos</h3>
+  <p>"Hangar Steak" (the cut is Hanger, which the description uses), "al natural," "knowledgable," "we dedicate ourselves on raising," "personal around the clock care," "11oz's."</p>
+  <div class="tags"><span class="tag e-low">Effort: Low</span><span class="tag">20 minutes</span></div></div>
+
+ <div class="card f quick"><h3>11. Turn on "Buy it now" buttons</h3>
+  <p>Product pages show Add to cart and Shop Pay installments, but no one-tap Shop Pay or Apple Pay button. The cart has them. One setting in the theme.</p>
+  <div class="tags"><span class="tag e-low">Effort: Low</span><span class="tag">10 minutes</span></div></div>
+
+ <div class="card f quick"><h3>12. Turn on an email signup form</h3>
+  <p>Klaviyo is installed and loads on every page, but no Klaviyo signup form is active. The only signup is a small box in the footer. No SMS signup.</p>
+  <div class="tags"><span class="tag e-med">Effort: Low to Medium</span><span class="tag">2 to 3 hours</span></div></div>
+</section>
+
+<section id="big">
+ <div class="group-h"><span class="dot" style="background:var(--gold)"></span><h3>Bigger bets</h3></div>
+
+ <div class="card f big"><h3>13. Faster mobile pages</h3>
+  <p>Homepage: main image appeared at 10.2 seconds, page size 2,119 KiB. Ribeye page: 7.5 seconds, with 910 ms of blocking scripts, page size 2,339 KiB. The homepage hero is set to load late (lazy), and the Meta (Facebook) pixel was the largest outside script at about 207 KB. The theme is Dawn 11.0.0 from 2023; newer versions exist.</p>
+  <div class="tags"><span class="tag e-med">Effort: Medium</span><span class="tag">Half day, more for a theme update</span></div></div>
+
+ <div class="card f big"><h3>14. Bundles, boxes and subscriptions</h3>
+  <p>No bundles or boxes are for sale. A grill box or freezer box raises order size and makes frozen shipping pay for itself. Subscriptions bring repeat orders.</p>
+  <div class="tags"><span class="tag e-med">Effort: Medium</span></div></div>
+
+ <div class="card f big"><h3>15. Real reviews and trust details</h3>
+  <p>The homepage has 3 hand-typed testimonials. No reviews app, no star ratings on products, no marbling or grading info, no processing details, no guarantee. A reviews app with automatic review requests fixes most of this.</p>
+  <div class="tags"><span class="tag e-med">Effort: Medium</span></div></div>
+
+ <div class="card f big"><h3>16. Analytics and Google Shopping</h3>
+  <p>The Meta pixel is active. No Google Analytics 4 or Google Ads tag was found in the site code. Adding Shopify's Google and YouTube app gives GA4 plus free Google Shopping listings (needs the policies from item 2).</p>
+  <div class="tags"><span class="tag e-med">Effort: Low to Medium</span></div></div>
+
+ <div class="card f big"><h3>17. Restaurant and bulk orders</h3>
+  <p>There is a Buy Livestock page for cattle, but nothing for restaurants, bulk orders or quarter and half beef. A simple inquiry page could open a new sales channel.</p>
+  <div class="tags"><span class="tag e-med">Effort: Medium</span></div></div>
+
+ <p class="note">Couldn't check from outside: checkout steps, real shipping rates and zones, which Klaviyo emails are running, Search Console data, and whether the gift certificate is a true Shopify gift card. Apps seen in the page code: Klaviyo, Shopify Forms, Facebook and Instagram (Meta pixel), Shop Pay, Shopify local pickup. All 47 internal links I tested worked.</p>
+</section>
+
+<section id="mockups">
+ <h2>What it could look like</h2>
+ <p class="sub">Screenshots of the current site (captured October 10, 2026 on a phone-size screen) next to mockups. Mockups use the store's real photos and prices. Any new wording is example copy for the ranch to edit, and anything in <span class="fill">highlight</span> is a placeholder the ranch needs to confirm.</p>
+
+ <h3 class="serif">Homepage hero</h3>
+ <div class="compare">
+  <div class="pane"><div class="ph">Current <span class="pill">Live site</span></div>
+   <div class="shot"><img src="img/home.png" alt="Current Circle H Wagyu homepage on mobile" loading="lazy"></div>
+   <div class="cap">Nice photo, but the headline does not say where the beef is from or how it gets to you. 3 of 4 best sellers show "Sold out."</div></div>
+  <div class="pane"><div class="ph">Mockup <span class="pill ex">Example copy</span></div>
+   <div class="mhero"><div class="in">
+    <div class="loc">Alamance County, North Carolina</div>
+    <h4>American Wagyu, raised on our family ranch</h4>
+    <p>Fullblood Wagyu crossed with Black Angus. Pick up at the ranch or have it shipped <span class="fill">frozen</span> to your door.</p>
+    <div class="btns"><span class="btn red">Shop in-stock cuts</span><span class="btn ghost">Our ranch</span></div>
+   </div></div>
+   <div class="cap">Location and the cross up front, two clear buttons, and the "Shop" button goes to in-stock items first.</div></div>
+ </div>
+
+ <h3 class="serif">Product page: price per lb and cut details</h3>
+ <div class="compare">
+  <div class="pane"><div class="ph">Current <span class="pill">Live site</span></div>
+   <div class="shot"><img src="img/product-ribeye.png" alt="Current Ribeye product page on mobile" loading="lazy"></div>
+   <div class="cap">Price is clear, but weight and pack size are buried in the description, which also says both "Bone In" and "Boneless." No price per lb, no shipping info.</div></div>
+  <div class="pane"><div class="ph">Mockup <span class="pill ex">Example copy</span></div>
+   <div class="mprod">
+    <div class="imgbox"><img src="img/ribeye.jpg" alt="American Wagyu Ribeye Steak on a white plate"><span class="badge">In stock</span></div>
+    <div class="brand">Circle H Wagyu</div>
+    <h4>American Wagyu Ribeye Steak</h4>
+    <div class="price"><span class="now">$45.00</span><span class="was">$55.00</span><span class="ppl">about $45 to $60 / lb</span></div>
+    <div class="specs">
+     <div class="spec"><b>Weight</b>12 to 16 oz</div>
+     <div class="spec"><b>Pack</b>1 steak</div>
+     <div class="spec"><b>Cut</b><span class="fill">Boneless or bone-in?</span></div>
+     <div class="spec"><b>Cross</b>Fullblood Wagyu x Black Angus</div>
+    </div>
+    <span class="btn red full">Add to cart</span>
+    <div style="height:8px"></div>
+    <span class="btn shop full">Buy with Shop Pay</span>
+    <p class="ship-mini">&#10003; Pickup at Circle H Ranch, usually ready in 2 to 4 days</p>
+   </div>
+   <div class="cap">Weight, pack size and price per lb at a glance, plus a one-tap checkout button. Price per lb is worked out from the listed price and weight range.</div></div>
+ </div>
+
+ <h3 class="serif">Sold-out items: capture the email</h3>
+ <div class="compare">
+  <div class="pane"><div class="ph">Current <span class="pill">Live site</span></div>
+   <div class="shot"><img src="img/product-soldout.png" alt="Current sold-out New York Strip product page" loading="lazy"></div>
+   <div class="cap">A grey "Sold out" button and nothing else.</div></div>
+  <div class="pane"><div class="ph">Mockup <span class="pill ex">Example copy</span></div>
+   <div class="mso">
+    <div class="brand" style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)">Circle H Wagyu</div>
+    <h4 class="serif" style="font-size:22px;margin:2px 0 6px">American Wagyu New York Strip Steak</h4>
+    <div class="price"><span class="now">$35.00</span><span class="ppl">1 steak, about 8 to 12 oz</span></div>
+    <p style="font-size:14px;margin:12px 0 0"><b>Sold out for now.</b> Our next batch is expected <span class="fill">[month]</span>. Get an email the day it's back.</p>
+    <input type="email" placeholder="Your email" aria-label="Email" disabled>
+    <span class="btn dark full">Notify me when it's back</span>
+    <p class="note" style="margin-top:10px">In stock now: Ribeye Steak ($45), Tenderloin Steak ($48)</p>
+   </div>
+   <div class="cap">Turns a dead end into a subscriber, and points to what can be bought today. Klaviyo's back-in-stock feature can power this.</div></div>
+ </div>
+
+ <h3 class="serif">Trust and ranch story strip</h3>
+ <div class="pane" style="margin-bottom:26px"><div class="ph">Mockup <span class="pill ex">Example copy</span></div>
+  <div class="trust">
+   <div><b>Raised in Alamance County</b>On our ranch in North Carolina</div>
+   <div><b>Wagyu x Black Angus</b>Fullblood to F1 crosses</div>
+   <div><b>Three-stage feeding</b>Round-the-clock personal care</div>
+   <div><b>Ranch pickup</b>Usually ready in 2 to 4 days</div>
+  </div>
+  <div class="story"><div class="simg" role="img" aria-label="Circle H cattle on pasture"></div>
+   <div class="stx"><h5>From our pasture to your table</h5>
+    <p>Every cut traces back to the animal it came from, raised on our hills in Alamance County. <span class="fill">Add processor, inspection and grading details here.</span></p></div></div>
+  <div class="cap">Uses facts already on the site (Alamance County, three-stage feeding, traceability, pickup time) in a short, scannable strip right under the hero. Currently this story is a long paragraph further down the page.</div>
+ </div>
+
+ <h3 class="serif">Shipping info block</h3>
+ <div class="compare">
+  <div class="pane"><div class="ph">Current <span class="pill">Live site</span></div>
+   <div class="cap" style="padding:16px">
+    <p style="margin:0 0 8px"><b>Today:</b> the top banner rotates "We Ship Nationwide," "Gift Certificates Now Available" and "Local Pick Up &amp; Delivery Available."</p>
+    <p style="margin:0">There is no shipping page, no refund page (both show "page not found"), and no word on frozen packing, ship days, minimums or cost.</p>
+   </div></div>
+  <div class="pane"><div class="ph">Mockup <span class="pill ex">Example copy</span></div>
+   <div class="mship"><h5>How your order gets to you</h5>
+    <div class="srow"><div class="ic">&#10052;</div><div><b>Shipped frozen</b><span class="fill">Vacuum sealed, packed with dry ice in an insulated box.</span></div></div>
+    <div class="srow"><div class="ic">&#128197;</div><div><b>Ship days</b><span class="fill">Ships Mon to Wed so it never sits over a weekend.</span></div></div>
+    <div class="srow"><div class="ic">&#128666;</div><div><b>Where we ship</b><span class="fill">Nationwide. Free shipping over $___.</span></div></div>
+    <div class="srow"><div class="ic">&#127968;</div><div><b>Ranch pickup</b>2174 Hwy 87, Elon NC. Usually ready in 2 to 4 days.</div></div>
+    <div class="srow"><div class="ic">&#9989;</div><div><b>Our promise</b><span class="fill">If it arrives thawed, contact us within 24 hours for a replacement.</span></div></div>
+   </div>
+   <div class="cap">Goes on every product page and links to the full Shipping and Refund policies. Only the pickup line is confirmed from the site; the rest must come from the ranch.</div></div>
+ </div>
+
+ <h3 class="serif">Email signup</h3>
+ <div class="compare">
+  <div class="pane"><div class="ph">Current <span class="pill">Live site</span></div>
+   <div class="shot"><img src="img/footer-signup.png" alt="Current footer with mailing list box" loading="lazy"></div>
+   <div class="cap">A small footer box: "Join our mailing list for exclusive specials, bundles and many other deals!" No popup or SMS option.</div></div>
+  <div class="pane"><div class="ph">Mockup <span class="pill ex">Example copy</span></div>
+   <div class="msign"><div class="in">
+    <h5>Get first pick of each harvest</h5>
+    <p>Our cuts sell out fast. Join the list and we'll email you when new beef is ready, plus <span class="fill">10% off</span> your first order.</p>
+    <input type="email" placeholder="Email address" aria-label="Email" disabled>
+    <span class="btn red full">Join the list</span>
+    <p class="fine">Optional: add your phone for text alerts. Unsubscribe anytime.</p>
+   </div></div>
+   <div class="cap">A reason to sign up that fits a ranch with limited stock. Built with the Klaviyo account that's already installed.</div></div>
+ </div>
+</section>
+
+<section id="help">
+ <h2>How I can help</h2>
+ <div class="card help">
+  <p>I'm Austin with Pilot Automations. I already know this store, so I can take these on in small, fixed-scope pieces. Here's what I'd suggest:</p>
+  <ul>
+   <li><b>Store cleanup sprint.</b> I'll fix the skincare descriptions, prices, options and typos, put in-stock items first, and draft shipping and refund policies for you to approve.</li>
+   <li><b>Product page rewrite.</b> A consistent layout for every cut with weight, price per lb, pack size, packaging and cooking tips, plus correct weights in Shopify so shipping rates are right.</li>
+   <li><b>Search fixes.</b> Page titles, descriptions, headings, image alt text, local search for Alamance County and the Triad, and Google Search Console and Merchant Center setup.</li>
+   <li><b>Email and text flows.</b> In your Klaviyo account: signup form, welcome emails, abandoned cart reminders, back-in-stock alerts, review requests and new harvest announcements.</li>
+   <li><b>Bundles and boxes.</b> Grill boxes, freezer boxes and gift bundles, and a subscription option if you want repeat orders.</li>
+   <li><b>Speed and app cleanup.</b> Faster homepage image, smaller images, a check on the Meta pixel, and a plan for a theme update.</li>
+   <li><b>Analytics.</b> Google Analytics 4, a check that Meta purchase tracking works, and a simple monthly sales and traffic report.</li>
+   <li><b>Automations.</b> Low-stock alerts to you, automatic notices when items sell out, "your pickup is ready" messages, and a restaurant and bulk inquiry form that goes straight to your inbox.</li>
+  </ul>
+  <p>Happy to start with the cleanup sprint, since it fixes the biggest trust gaps in an afternoon.</p>
+ </div>
+</section>
+</main>
+<footer><div class="wrap">Prepared by Pilot Automations from the public website only. No logins, purchases or form submissions were made. Photos and prices belong to Circle H Wagyu and are shown here for review purposes.</div></footer>
+</body>
+</html>
